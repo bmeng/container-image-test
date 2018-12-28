@@ -1,0 +1,7 @@
+schemaVersion: "2.0.0"
+
+fileExistenceTests:
+- name: 'egress-http-proxy.sh'
+  path: '/bin/egress-http-proxy.sh'
+  shouldExist: true
+  permissions: '-rwxr-xr-x'

@@ -1,0 +1,12 @@
+schemaVersion: "2.0.0"
+
+commandTests:
+- name: "keepalived"
+  command: "keepalived"
+  args: ["-h"]
+  expectedError: ["Usage: keepalived"]
+  exitCode: 0
+- name: "monitor.sh"
+  command: "/var/lib/ipfailover/keepalived/monitor.sh"
+  expectedOutput: ["OpenShift IP Failover service terminated"]
+  exitCode: 0

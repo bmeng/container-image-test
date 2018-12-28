@@ -1,0 +1,12 @@
+schemaVersion: "2.0.0"
+
+commandTests:
+- name: "squid"
+  command: "squid"
+  args: ["-h"]
+  expectedError: ["Usage: squid"]
+  exitCode: 1
+- name: "egress-http-proxy.sh"
+  command: "/bin/egress-http-proxy.sh"
+  expectedError: ["EGRESS_HTTP_PROXY_DESTINATION: unbound variable"]
+  exitCode: 1

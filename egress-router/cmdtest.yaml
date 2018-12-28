@@ -1,0 +1,12 @@
+schemaVersion: "2.0.0"
+
+commandTests:
+- name: "egress-router.sh"
+  command: "/bin/egress-router.sh"
+  envVars:
+  - key: "EGRESS_SOURCE"
+    value: "1.1.1.1"
+  - key: "EGRESS_GATEWAY"
+    value: "1.1.1.1"
+  expectedError: ["Cannot find device.*macvlan0.*"]
+  exitCode: 1

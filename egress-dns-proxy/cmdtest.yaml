@@ -1,0 +1,12 @@
+schemaVersion: "2.0.0"
+
+commandTests:
+- name: "haproxy"
+  command: "haproxy"
+  args: ["-h"]
+  expectedError: ["Usage : haproxy"]
+  exitCode: 1
+- name: "egress-dns-proxy.sh"
+  command: "/bin/egress-dns-proxy.sh"
+  expectedError: ["EGRESS_DNS_PROXY_DESTINATION: unbound variable"]
+  exitCode: 1
